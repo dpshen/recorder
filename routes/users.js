@@ -6,8 +6,8 @@ router.get('/signin', function (req, res, next) {
 
     console.log(req.originalurl);
     var data = req.query;
-    data.userid = 1;
-    data.username = req.query.name;
+    data.userId = 1;
+    data.userName = req.query.name;
     data.phone = req.query.phone;
 
     data.ticket = "57284d87719cc7d20da62fc8";
@@ -20,7 +20,7 @@ router.get('/checkAuth', function (req, res, next) {
 
     console.log(req.originalurl);
     var data = req.query;
-    data.userid = 1;
+    data.userId = 1;
     data.ticket = "57284d87719cc7d20da62fc8";
 
     req.rst.setResult(data);
