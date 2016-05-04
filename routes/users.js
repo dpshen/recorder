@@ -11,8 +11,8 @@ router.get('/signin', function (req, res, next) {
     data.phone = req.query.phone;
 
     data.ticket = "57284d87719cc7d20da62fc8";
-    req.rst.setresult(data);
-    res.end(req.rst.tostring())
+    req.rst.setResult(data);
+    res.end(req.rst.toString())
 
 });
 
@@ -23,8 +23,8 @@ router.get('/checkAuth', function (req, res, next) {
     data.userid = 1;
     data.ticket = "57284d87719cc7d20da62fc8";
 
-    req.rst.setresult(data);
-    res.end(req.rst.tostring())
+    req.rst.setResult(data);
+    res.end(req.rst.toString())
 
 });
 
