@@ -4,16 +4,20 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('recorder:server');
 var http = require('http');
+
+var defaultPort = '3007';
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '5000');
+var port = normalizePort(process.env.PORT || defaultPort );
 app.set('port', port);
+
+console.log("listen at port: ", port)
 
 /**
  * Create HTTP server.
