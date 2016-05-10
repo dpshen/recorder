@@ -37,7 +37,7 @@ app.use('*', function (req, res, next) {
 //  res.end(JSON.stringify(rst))
 //})
 
-app.use('/', routes);
+//app.use('/', routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
