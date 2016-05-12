@@ -12,6 +12,7 @@ router.get('/signin', function (req, res, next) {
     data.phone = req.query.phone;
 
     data.ticket = uuid.v1();
+    console.log(data);
     req.rst.setResult(data);
     res.end(req.rst.toString())
 
@@ -21,9 +22,11 @@ router.get('/checkAuth', function (req, res, next) {
 
     console.log(req.originalUrl);
     var data = req.query;
-    data.userId = Math.ceil(Math.random()*10);
+    //data.userId = Math.ceil(Math.random()*10);
+    data.userId = 1;
     data.ticket = uuid.v1();
 
+    console.log(data);
     req.rst.setResult(data);
     res.end(req.rst.toString())
 
