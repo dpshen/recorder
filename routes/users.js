@@ -7,7 +7,7 @@ router.get('/signin', function (req, res, next) {
 
     console.log(req.originalUrl);
     var data = req.query;
-    data.userId = uuid.v1();
+    data.userId = 1;
     data.userName = req.query.name;
     data.phone = req.query.phone;
 
