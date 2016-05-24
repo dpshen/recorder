@@ -24,7 +24,8 @@ router.get('/checkAuth', function (req, res, next) {
     var data = req.query;
     //data.userId = Math.ceil(Math.random()*10);
     data.userId = 1;
-    data.ticket = uuid.v1();
+    data.ticket = "19579c80-1d9a-11e6-89b0-3319d0f31fc4";
+    data.phone = '1876722';
 
     console.log(data);
     req.rst.setResult(data);
