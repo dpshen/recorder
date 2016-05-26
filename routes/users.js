@@ -11,6 +11,7 @@ router.get('/signin', function (req, res, next) {
     console.log(req.originalUrl);
     var data = req.query;
     data.userId = 1;
+    data.id = 1;
     data.userName = req.query.name;
     data.phone = req.query.phone;
 
@@ -30,6 +31,7 @@ router.get('/checkAuth', function (req, res, next) {
     } else {
         cache.maxId += 1;
         data.userId = cache.maxId.toString();
+        data.id = data.userId;
         //data.ticket = "19579c80-1d9a-11e6-89b0-3319d0f31fc4";
         data.phone = data.phone || '123456';
     }
